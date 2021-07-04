@@ -1,0 +1,21 @@
+attack_technique:
+- T1134.006
+display_name: SpoofProcessArgs
+atomic_tests:
+- name: Process Argument Spoofing
+  description: Spoofs the command line arguments of a process
+  supported_platforms:
+  - windows
+  input_arguments:
+    spoofedcmdline:
+      description: Cmdline arg that will be spoofed and shown in Sysmon.
+      type: String
+      default: FakeCmdLine
+    realcmdline:
+      description: Cmdline arg that will be executed.
+      type: String
+      default: RealCmdLine
+  executor:
+    command: powershell -executionpolicy bypass -command c:\users\da-rich\desktop\proc_arg_spoof.ps1
+    name: powershell
+
