@@ -1,5 +1,6 @@
 # Taken from https://github.com/FuzzySecurity/Sharp-Suite
 # https://github.com/FuzzySecurity/Sharp-Suite/tree/master/SwampThing
+#
 
 $SwampThing = @"
 using System;
